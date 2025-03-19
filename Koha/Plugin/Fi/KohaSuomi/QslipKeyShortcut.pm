@@ -22,7 +22,7 @@ our $metadata = {
     minimum_version => '24.05',
     maximum_version => '',
     version         => $VERSION,
-    description     => "Alt+P tulostaa pikakuitin (tämän päivän lainat/QSLIP) lainaussivulla",
+    description     => "Alt+P tulostaa pikakuitin (tämän päivän lainat/QSLIP) lainaussivulla. (Paikalliskannat)",
 };
 
 ## This is the minimum code required for a plugin's 'new' method
