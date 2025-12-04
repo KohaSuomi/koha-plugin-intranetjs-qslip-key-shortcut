@@ -3,9 +3,9 @@
 $(document).ready(function () {
     if (window.location.pathname == '/cgi-bin/koha/circ/circulation.pl') {
         window.addEventListener("keydown", function (event) {
-            if (event.altKey && event.key === "p") {
+            if (event.altKey && !event.shiftKey && event.key.toLowerCase() === "p") {
                 window.open("/cgi-bin/koha/members/printslip.pl?borrowernumber=" + borrowernumber + "&amp;print=issueqslip", "printwindow");
-            }
+            } 
         });
     }
 });
