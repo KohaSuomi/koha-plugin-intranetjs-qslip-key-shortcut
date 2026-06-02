@@ -58,6 +58,10 @@ sub new {
     ## and returns our actual 
     my $self = $class->SUPER::new($args);
 
+    my ($name, $description) = $self->get_localized_metadata();
+    $self->{'metadata'}->{'name'} = $name;
+    $self->{'metadata'}->{'description'} = $description;
+
     return $self;
 }
 
