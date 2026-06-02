@@ -9,7 +9,7 @@ use base qw(Koha::Plugins::Base);
 use C4::Context;
 use utf8;
 use File::Slurp;
-
+use C4::Languages;
 ## Here we set our plugin version
 our $VERSION = "1.0.0";
 
@@ -24,6 +24,25 @@ our $metadata = {
     version         => $VERSION,
     description     => "Alt+P tulostaa pikakuitin (tämän päivän lainat/QSLIP) lainaussivulla. (Paikalliskannat)",
 };
+    
+sub get_localized_metadata {
+    my ($self) = @_;
+    my $lang = C4::Languages::getlanguage() || 'en';
+    my ($name, $description);
+
+    if ($lang eq 'sv-SE') {
+        $name = "IntranetUserJS: Qslip-kortkommando";
+        $description = "Alt+P skriver ut en snabblån (dagens lån/QSLIP) på lånssidan. (Lokala databaser)";
+    
+    } elsif ($lang eq 'fi-FI' ) {
+        $name = "IntranetUserJS: Qslip-näppäinkomento";
+        $description = "Alt+P tulostaa pikakuitin (tämän päivän lainat/QSLIP) lainaussivulla. (Paikalliskannat)";
+    } else {
+        $name = "IntranetUserJS: Qslip keyboard shortcut";
+        $description = "Alt+P prints a quick loan (today's loans/QSLIP) on the loan page. (Local databases)";
+    }
+    return ($name, $description);
+}
 
 ## This is the minimum code required for a plugin's 'new' method
 ## More can be added, but none should be removed
