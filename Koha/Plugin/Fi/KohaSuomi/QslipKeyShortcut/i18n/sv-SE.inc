@@ -1,14 +1,14 @@
 [%
     T = {
-        configure_1                                = "IntranetUserJS: Qslip-kortkommando - Konfiguration",
+        configure_1                                = "IntranetUserJS: Dagens lån-kortkommando",
         configure_2                                = "Hem",
-        configure_3                                = "Moduler",
-        configure_4                                = "&rsaquo; IntranetUserJS: Qslip-kortkommando &rsaquo; Konfiguration",
+        configure_3                                = "Plugins",
+        configure_4                                = "&rsaquo; IntranetUserJS: Dagens lån-kortkommando &rsaquo; Inställningar",
         configure_5                                = "ID för rapporten som ska användas:",
-        configure_6                                = "Spara konfiguration",
-        configure_7                                = "Uppgraderingsstatus",
-        configure_8                                = "Modulen har aldrig uppgraderats.",
-        viewjs_1                                   = "IntranetUserJS: Qslip-kortkommando",
-        viewjs_2                                   = "&rsaquo; QslipKeyShortcut &rsaquo; Visa JS-verktyg",
+        configure_6                                = "Spara inställningar",
+        configure_7                                = "Uppdateringsstatus",
+        configure_8                                = "Plugin har aldrig uppdaterats.",
+        viewjs_1                                   = "IntranetUserJS: Dagens lån-kortkommando",
+        viewjs_2                                   = "&rsaquo; IntranetUserJS: Dagens lån-kortkommando &rsaquo; Visa JS-plugin",
     }
 %]

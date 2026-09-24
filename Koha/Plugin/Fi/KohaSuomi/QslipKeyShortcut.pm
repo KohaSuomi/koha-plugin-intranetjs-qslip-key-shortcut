@@ -15,14 +15,14 @@ our $VERSION = "1.0.0";
 
 ## Here is our metadata, some keys are required, some are optional
 our $metadata = {
-    name            => "IntranetUserJS: Qslip keyboard shortcut",
+    name            => "IntranetUserJS: Quick slip keyboard shortcut",
     author          => 'Lari Strand',
     date_authored   => '2024-07-10',
     date_updated    => '2024-07-10',
     minimum_version => '24.05',
     maximum_version => '',
     version         => $VERSION,
-    description     => "Alt+P tulostaa pikakuitin (tämän päivän lainat/QSLIP) lainaussivulla. (Paikalliskannat)",
+    description     => "Alt+P prints a quick slip (today's checkouts)/QSLIP) on the checkout page. (Local databases)",
 };
     
 sub get_localized_metadata {
@@ -31,15 +31,15 @@ sub get_localized_metadata {
     my ($name, $description);
 
     if ($lang eq 'sv-SE') {
-        $name = "IntranetUserJS: Qslip-kortkommando";
-        $description = "Alt+P skriver ut en snabblån (dagens lån/QSLIP) på lånssidan. (Lokala databaser)";
+        $name = "IntranetUserJS: Dagens lån-kortkommando";
+        $description = "Alt+P skriver ut ett Dagens lån-kvitto (QSLIP) på Låna ut-sidan. (Lokala databaser)";
     
     } elsif ($lang eq 'fi-FI' ) {
-        $name = "IntranetUserJS: Qslip-näppäinkomento";
-        $description = "Alt+P tulostaa pikakuitin (tämän päivän lainat/QSLIP) lainaussivulla. (Paikalliskannat)";
+        $name = "IntranetUserJS: Päivän lainat -näppäinkomento";
+        $description = "Alt+P tulostaa Päivän lainat -kuitin (QSLIP) lainaussivulla. (Paikalliskannat)";
     } else {
-        $name = "IntranetUserJS: Qslip keyboard shortcut";
-        $description = "Alt+P prints a quick loan (today's loans/QSLIP) on the loan page. (Local databases)";
+        $name = "IntranetUserJS: Quick slip keyboard shortcut";
+        $description = "Alt+P prints a quick slip (today's checkouts)/QSLIP) on the checkout page. (Local databases)";
     }
     return ($name, $description);
 }
